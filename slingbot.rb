@@ -42,3 +42,5 @@ bot = Cinch::Bot.new do
 		c.plugins.plugins = [PlayerList]
 	end
 end
+
+bot.start
