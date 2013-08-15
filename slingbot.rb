@@ -8,8 +8,6 @@ class PlayerList
 	match "unready", method: :unready
 	match "list", method: :list
 
-	players = []
-	
 	def listen(m, user)
 		players.delete(m.user.nick)
 		m.reply "#{m.user.nick} has quit test"
@@ -36,6 +34,7 @@ bot = Cinch::Bot.new do
 		c.channels = ["#slingbot"]
 		c.nick = "[SlingBot]"
 		c.plugins.plugins = [PlayerList]
+		players = []
 	end
 end
 
