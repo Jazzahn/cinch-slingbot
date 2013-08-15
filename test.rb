@@ -5,6 +5,5 @@ bot = Cinch::Bot.new do
 		c.server = "contego.ny.us.synirc.net"
 		c.channels = ["#slingbot"]
 		c.nick = "[SlingBot]"
-		c.plugins.plugins = [PlayerList]
 	end
 end
