@@ -8,12 +8,8 @@ class PlayerList
 	match "unready", method: :unready
 	match "list", method: :list
 
-	def initialize(*args)
-		super
-
-		players = []
-	end
-
+	players = []
+	
 	def listen(m, user)
 		players.delete(m.user.nick)
 		m.reply "#{m.user.nick} has quit test"
